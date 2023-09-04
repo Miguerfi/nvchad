@@ -101,6 +101,7 @@
 # keymaps
  - leader = `space`
  - check the default keymaps with `<leader ch>`
+
 | Comando                  | Descrição                                   |
 |--------------------------|---------------------------------------------|
 | `; or :`                      | Entra no modo de comando                    |
