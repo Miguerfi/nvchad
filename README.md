@@ -99,8 +99,8 @@
     - Key Features: Improvements to insert mode exit function, customizable settings.
 
 # keymaps
-leader = `space`
-check the default keymaps with `<leader ch>`
+ - leader = `space`
+ - check the default keymaps with `<leader ch>`
 | Comando                  | Descrição                                   |
 |--------------------------|---------------------------------------------|
 | `; or :`                      | Entra no modo de comando                    |
