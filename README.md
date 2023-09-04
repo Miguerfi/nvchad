@@ -1,3 +1,40 @@
+<h1 align="center">NvChad</h1>
+
+<div align="center">
+	<a href="https://nvchad.com/">Home</a>
+  <span> • </span>
+    	<a href="https://nvchad.com/docs/quickstart/install">Install</a>
+  <span> • </span>
+       	<a href="https://nvchad.com/docs/contribute">Contribute</a>
+  <span> • </span>
+	<a href="https://github.com/NvChad/NvChad#gift_heart-support">Support</a>
+  <span> • </span>
+        <a href="https://nvchad.com/docs/features">Features</a>
+  <p></p>
+</div> 
+<div align="center">
+ 
+[![Neovim Minimum Version](https://img.shields.io/badge/Neovim-0.9.0-blueviolet.svg?style=flat-square&logo=Neovim&color=90E59A&logoColor=white)](https://github.com/neovim/neovim)
+[![GitHub Issues](https://img.shields.io/github/issues/NvChad/NvChad.svg?style=flat-square&label=Issues&color=d77982)](https://github.com/Miguerfi/nvchad/issues)
+[![Discord](https://img.shields.io/discord/553302713681707043?color=738adb&label=Discord&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/va59u6B)
+
+
+  </div>
+
+
+# SHOWCASE
+![image](https://github.com/Miguerfi/nvchad/assets/91486755/7c97a5a6-f5a6-415b-b284-544859d522a3)
+![image](https://github.com/Miguerfi/nvchad/assets/91486755/995cd025-6b8d-4449-8254-d5f3d902f202)
+![image](https://github.com/Miguerfi/nvchad/assets/91486755/4dc7cab3-4863-4fdb-9955-48cb15e215b0)
+![image](https://github.com/Miguerfi/nvchad/assets/91486755/b1e05e1f-6a0e-4cf9-9503-f4c313f6d9f3)
+![image](https://github.com/Miguerfi/nvchad/assets/91486755/9f3f63f2-c7d2-4849-b0d3-043e7b6cd6e4)
+![image](https://github.com/Miguerfi/nvchad/assets/91486755/8d3b94a9-d5f9-4d9e-bc02-09a449312386)
+
+
+
+
+
+
 # installation
 1. **run the setup file**
     - `./install.sh`
