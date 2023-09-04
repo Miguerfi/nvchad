@@ -99,9 +99,8 @@
     - Key Features: Improvements to insert mode exit function, customizable settings.
 
 # keymaps
-check the cheatsheet to the default **nvchad** pressing <leader ch>
-leader key is `space`
-
+leader = `space`
+check the default keymaps with <leader ch>
 | Comando                  | Descrição                                   |
 |--------------------------|---------------------------------------------|
 | `; or :`                      | Entra no modo de comando                    |
