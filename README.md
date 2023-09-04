@@ -99,4 +99,4 @@
     - Key Features: Improvements to insert mode exit function, customizable settings.
 
 
-thx to the [nvchadteam](https://github.com/NvChad/NvChad)
+this is my dotfiles to [NVCHAD](https://github.com/NvChad/NvChad) project.
