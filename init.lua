@@ -32,6 +32,10 @@ local autocmd = vim.api.nvim_create_autocmd
 -- }
 --
 vim.cmd [[autocmd VimEnter * GitBlameToggle]]
+vim.cmd [[autocmd VimEnter * SymbolsOutline]]
+-- :SymbolsOutline
+-- :SymbolsOutlineOpen	Open symbols outline
+-- :SymbolsOutlineClose
 -- Carrega o plugin no início do Neovim
 
 -- Função para executar o comando do plugin após o Neovim iniciar completamente
@@ -52,14 +56,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
-
-
-
-
-
 -- Auto format on save
 autocmd("BufWritePre", {
-  pattern = { "*.js", "*.java", "*.lua" },
+  pattern = { "*.sh", "*.py", "*.ts", "*.tsx", "*.jsx", "*.js", "*.java", "*.lua" },
   callback = function()
     vim.lsp.buf.format { async = false }
   end,

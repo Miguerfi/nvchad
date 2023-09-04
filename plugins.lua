@@ -3,6 +3,125 @@ local overrides = require "custom.configs.overrides"
 ---@type NvPluginSpec[]
 local plugins = {
   -- lazy.nvim
+
+  { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
+  {
+    "simrat39/symbols-outline.nvim",
+    cmd = { "SymbolsOutline", "SymbolsOutlineOpen", "SymbolsOutlineClose" },
+    config = function()
+      require("symbols-outline").setup {
+        opts = {
+          highlight_hovered_item = true,
+          show_guides = true,
+          auto_preview = false,
+          position = "right",
+          relative_width = true,
+          width = 25,
+          auto_close = false,
+          show_numbers = false,
+          show_relative_numbers = false,
+          show_symbol_details = true,
+          preview_bg_highlight = "Pmenu",
+          autofold_depth = nil,
+          auto_unfold_hover = true,
+          fold_markers = { "", "" },
+          wrap = false,
+          keymaps = { -- These keymaps can be a string or a table for multiple keys
+            close = { "<Esc>", "q" },
+            goto_location = "<Cr>",
+            focus_location = "o",
+            hover_symbol = "<C-space>",
+            toggle_preview = "K",
+            rename_symbol = "r",
+            code_actions = "a",
+            fold = "h",
+            unfold = "l",
+            fold_all = "W",
+            unfold_all = "E",
+            fold_reset = "R",
+          },
+          lsp_blacklist = {},
+          symbol_blacklist = {},
+          symbols = {
+            File = { icon = "", hl = "@text.uri" },
+            Module = { icon = "", hl = "@namespace" },
+            Namespace = { icon = "", hl = "@namespace" },
+            Package = { icon = "", hl = "@namespace" },
+            Class = { icon = "𝓒", hl = "@type" },
+            Method = { icon = "ƒ", hl = "@method" },
+            Property = { icon = "", hl = "@method" },
+            Field = { icon = "", hl = "@field" },
+            Constructor = { icon = "", hl = "@constructor" },
+            Enum = { icon = "ℰ", hl = "@type" },
+            Interface = { icon = "ﰮ", hl = "@type" },
+            Function = { icon = "", hl = "@function" },
+            Variable = { icon = "", hl = "@constant" },
+            Constant = { icon = "", hl = "@constant" },
+            String = { icon = "𝓐", hl = "@string" },
+            Number = { icon = "#", hl = "@number" },
+            Boolean = { icon = "⊨", hl = "@boolean" },
+            Array = { icon = "", hl = "@constant" },
+            Object = { icon = "⦿", hl = "@type" },
+            Key = { icon = "🔐", hl = "@type" },
+            Null = { icon = "NULL", hl = "@type" },
+            EnumMember = { icon = "", hl = "@field" },
+            Struct = { icon = "𝓢", hl = "@type" },
+            Event = { icon = "🗲", hl = "@type" },
+            Operator = { icon = "+", hl = "@operator" },
+            TypeParameter = { icon = "𝙏", hl = "@parameter" },
+            Component = { icon = "", hl = "@function" },
+            Fragment = { icon = "", hl = "@constant" },
+          },
+        },
+      }
+    end,
+  },
+  {
+    "rmagatti/goto-preview",
+    lazy = false,
+    config = function()
+      require("goto-preview").setup {
+        width = 120, -- Width of the floating window
+        height = 15, -- Height of the floating window
+        border = { "↖", "─", "┐", "│", "┘", "─", "└", "│" }, -- Border characters of the floating window
+        default_mappings = true, -- Bind default mappings
+        debug = false, -- Print debug information
+        opacity = nil, -- 0-100 opacity level of the floating window where 100 is fully transparent.
+        resizing_mappings = false, -- Binds arrow keys to resizing the floating window.
+        post_open_hook = nil, -- A function taking two arguments, a buffer and a window to be ran as a hook.
+        post_close_hook = nil, -- A function taking two arguments, a buffer and a window to be ran as a hook.
+        references = { -- Configure the telescope UI for slowing the references cycling window.
+          telescope = require("telescope.themes").get_dropdown { hide_preview = false },
+        },
+        -- These two configs can also be passed down to the goto-preview definition and implementation calls for one off "peak" functionality.
+        focus_on_open = true, -- Focus the floating window when opening it.
+        dismiss_on_move = false, -- Dismiss the floating window when moving the cursor.
+        force_close = true, -- passed into vim.api.nvim_win_close's second argument. See :h nvim_win_close
+        bufhidden = "wipe", -- the bufhidden option to set on the floating window. See :h bufhidden
+        stack_floating_preview_windows = true, -- Whether to nest floating windows
+        preview_window_title = { enable = true, position = "left" }, -- Whether to set the preview window title as the filename
+      }
+    end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("todo-comments").setup {}
+    end,
+    lazy = false,
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
   {
     "folke/noice.nvim",
     event = "VeryLazy",
