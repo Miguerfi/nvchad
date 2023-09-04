@@ -97,3 +97,6 @@
     - Description: Plugin that enhances the exit function of insert mode.
     - Author: max397574
     - Key Features: Improvements to insert mode exit function, customizable settings.
+
+
+thx to the [nvchadteam](https://github.com/NvChad/NvChad)
