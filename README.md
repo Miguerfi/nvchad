@@ -98,5 +98,15 @@
     - Author: max397574
     - Key Features: Improvements to insert mode exit function, customizable settings.
 
+# keymaps
+check the cheatsheet to the default **nvchad** pressing <leader ch>
+leader key is `space`
+
+| Comando                  | Descrição                                   |
+|--------------------------|---------------------------------------------|
+| `; or :`                      | Entra no modo de comando                    |
+| `<leader>lp`             | Abre a Trouble List para diagnósticos de documentos |
+| `<leader>la`             | Abre a Trouble List para diagnósticos de espaço de trabalho |
+| `<leader>gg`             | Abre o LazyGit, uma interface Git simplificada |
 
 this is my dotfiles to [NVCHAD](https://github.com/NvChad/NvChad) project.
